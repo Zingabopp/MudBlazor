@@ -212,6 +212,8 @@ namespace MudBlazor
             if (GetReadOnlyState())
                 return;
             Time = TimeIntermediate;
+            _initialHour = Time?.Hours ?? 0;
+            _initialMinute = Time?.Minutes ?? 0;
         }
 
         public override async void Clear(bool close = true)
